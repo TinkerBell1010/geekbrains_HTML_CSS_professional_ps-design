@@ -300,6 +300,13 @@ body
         &::before
             left: 23px
 
+        &-card-wrapper
+            display: flex
+            justify-content: space-between
+            width: 100%
+            padding-bottom: 16px
+            border-bottom: 1px solid rgba(237, 237, 237, 0.74)
+
         &-card
             display: -webkit-box
             display: -ms-flexbox
@@ -309,12 +316,9 @@ body
             align-items: center
             -webkit-box-pack: start
             -ms-flex-pack: start
-            justify-content: flex-start
-            padding-bottom: 16px
             width: 100%
-            border-bottom: 1px solid rgba(237, 237, 237, 0.74)
-
-        &-card:not(:first-child)
+            justify-content: flex-start
+        &-card-wrapper:not(:first-child)
             margin-top: 16px
 
         &-card-img
@@ -349,6 +353,9 @@ body
             text-transform: uppercase
             color: #c0c0c0
             cursor: pointer
+
+            &:hover
+                color: #f16d7f
 
         &-total-price
             width: 100%
@@ -639,13 +646,14 @@ body
         flex-wrap: wrap
         justify-content: space-between
         margin: 60px 0
+        width: 100%
 
     &__card
         width: 261px
         position: relative
 
-        &:nth-child(-n+4)
-            margin-bottom: 39px
+        &:not(:nth-child(-n+4))
+            margin-top: 39px
 
         &-link
             display: block
@@ -748,6 +756,24 @@ body
             background-color: #ffffff
             color: #f16d7f
             border: 1px solid #f16d7f
+
+    &-single-page
+        margin: 33px auto 73px
+
+    &-single-page &__title
+        margin-bottom: 72px
+        font-size: 24px
+        line-height: 20px
+        font-weight: 900
+        text-transform: uppercase
+        color: #4d4d4d
+
+    &-single-page &__cards
+        margin: 0
+
+    &-single-page &__card-name
+        color: #6f6e6e
+        font-size: 14px
 
 .shop-info
     margin: 113px auto 97px
@@ -1043,3 +1069,206 @@ body
             &:hover
                 background-color: #f16d7f
                 color: #ffffff
+
+.main-content-header
+    background-color: #f8f3f4
+
+    &>.container
+        padding: 65px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__title
+        font-size: 24px
+        line-height: 20px
+        font-weight: 900
+        text-transform: uppercase
+        color: #f16d7f
+
+    &__breadcrumb
+        display: flex
+
+        &-item
+            font-size: 14px
+            line-height: 20px
+            font-weight: 300
+            text-transform: uppercase
+            color: #636363
+
+            &:not(:last-of-type)::after
+                content: "/\00a0"
+
+        &-link
+            font-size: 14px
+            line-height: 20px
+            font-weight: 300
+            text-transform: uppercase
+            color: #636363
+
+        &-item:last-of-type &-link
+            font-weight: 700
+            color: #f16d7f
+
+        &-item &-link:hover
+            color: #F892A0
+
+.product
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__img-wrapper
+        width: 100%
+        min-height: 777px
+        background-color: #f7f7f7
+        box-sizing: border-box
+        border: 1px solid #eaeaea
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: flex-start
+
+    &__img
+        width: 597px
+        margin-top: 11px
+
+        &-buttons
+            position: absolute
+            display: flex
+            width: 100%
+            justify-content: space-between
+            top: 365px
+
+        &-button
+            padding: 16px 18px 16px 21px
+            border: 1px solid transparent
+            cursor: pointer
+            background-color: rgba(42,42,42,0.14)
+
+            &:last-of-type
+                padding: 16px 21px 16px 18px
+
+            & .fa
+                font-size: 24px
+                line-height: 24px
+                color: #ffffff
+
+            &:hover .fa
+                color: #f16d7f
+
+    &__info
+        background-color: #ffffff
+        border: 1px solid #eaeaea
+        box-sizing: border-box
+        position: relative
+        top: -86px
+        padding: 73px 250px 122px
+        font-size: 14px
+        line-height: 24px
+        font-weight: 700
+        text-transform: uppercase
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &-collection
+            color: #f16d7f
+            border-bottom: 1px solid #eaeaea
+            padding-bottom: 10px
+            position: relative
+
+            &::after
+                content: ''
+                display: block
+                width: 63px
+                height: 3px
+                background-color: #ef5b70
+                position: absolute
+                top: 33px
+                left: 0
+                right: 0
+                margin: 0 auto
+
+        &-name
+            font-size: 18px
+            font-weight: 900
+            margin: 15px 0 59px
+
+        &-description
+            text-align: center
+            font-weight: 300
+            color: #5e5e5e
+            text-transform: none
+
+        &-characteristic
+            display: flex
+            color: #b9b9b9
+            margin: 18px 0 32px
+            & p:first-child
+                margin-right: 44px
+
+        &-characteristic-value
+            color: #2f2f2f
+
+        &-price
+            font-size: 24px
+            color: #ef5b70
+            width: 100%
+            text-align: center
+            padding-bottom: 43px
+            border-bottom: 1px solid #eaeaea
+
+        &-filters
+            display: flex
+            width: 537px
+            justify-content: space-between
+            margin: 58px 0 28px
+
+        &-filter
+
+            &-text
+                color: #2f2f2f
+                margin-bottom: 11px
+
+            &-form
+                display: flex
+                flex-direction: column
+
+                &-field
+                    width: 144px
+                    height: 35px
+                    border: 1px solid #eaeaea
+                    font-size: 13px
+                    line-height: 24px
+                    font-weight: 400
+                    color: #bcbcbc
+                    padding: 0 15px
+                    box-sizing: border-box
+
+        &-button
+            border: 1px solid #ef5b70
+            width: 537px
+            font-size: 16px
+            line-height: 1.2
+            font-weight: 700
+            color: #ef5b70
+            background-color: #fff
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 16px 0
+            cursor: pointer
+
+            &-svg
+                margin-right: 15px
+
+                &-path
+                    fill: #ef5b70
+
+            &:hover
+                color: #fff
+                background-color: #ef5b70
+
+            &:hover &-svg-path
+                fill: #fff
