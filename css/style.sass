@@ -1,45 +1,10 @@
-$dark = #222222
-$darkpink1 = #f16d7f
-$light-border = #ececec
-$light-shadow = #aaaaaa
-$darkpink2 = #ef5b70
-$white = #ffffff
-$light-border2 = #e6e6e6
-$light = #f9f9f9
-$gray-arrow = #838383
-$light-gray = #a4a4a4
-$dark2 = #232323
-$light-border3 = #e8e8e8
-$gray-text = #9f9f9f
-$dark-gray = #4f4f4f
-$light-gray2 = #c0c0c0
-$light2 = #eaeaea
-$dark-gray2 = #4a4a4a
-$stars = #e4af48
-$dark-gray3 = #3a3838
-$light3 = #ebebeb 
-$light-gray3 = #d6d6d6
-$light-gray4 = #c4c4c4
-$dark-gray4 = #4d4d4d
-$gray = #6f6e6e
-$dark3 = #222224
-$light4 = #fbfbfb
-$light5 = #e1e1e1
-$darkpink3 = #B84252
-$gray2 = #898989
-$gray3 = #7a7a7a
-$light-gray5 = #b2b2b2
-$light6 = #f8f3f4
-$gray4 = #636363
-$lightpink = #F892A0
-$light7 = #f7f7f7
-$gray5 = #5e5e5e
-$light-gray6 = #b9b9b9
-$dark4 = #2f2f2f
-$light-gray7 = #bcbcbc
-$light8 = #dfdfdf
-$light9 = #f0f0f0
-$light10 = #f3f3f3
+@import "vars"
+
+@mixin text($fs, $lh, $fw, $color)
+    font-size: $fs
+    line-height: $lh
+    font-weight: $fw
+    color: $color
 
 *
     margin: 0
@@ -78,6 +43,11 @@ body
     &-pink-text
         font-weight: 900
         color: $darkpink1
+
+.button
+    background-color: $darkpink1
+    color: $white
+    border: 1px solid transparent
 
 .drop-down
     border: 1px solid $light-border
@@ -1654,3 +1624,5 @@ body
 
     & .fetured-items__card:not(:nth-child(-n+3))
         margin-top: 39px
+
+@import "checkout"
