@@ -300,6 +300,9 @@ body
             color: $gray-arrow
             transition: all 0.4s ease
 
+    &__search-form
+        display: flex
+
     &__search-input
         border: none
         width: 280px
@@ -353,13 +356,13 @@ body
         &-container
             cursor: pointer
             transition: background-color 0.4s ease
+            position: relative
 
     &__search-icon
         position: absolute
-        width: 36px
         text-align: center
         color: $light-gray
-        right: 0
+        right: 11px
         top: 12px
         font-size: 14px
         display: -webkit-box
@@ -397,8 +400,7 @@ body
     &__category
         list-style-type: none
 
-        & > a
-            text-decoration: none
+        & > h3
             font-size: 14px
             line-height: 32px
             font-weight: 400
@@ -406,10 +408,8 @@ body
             color: $dark2
             text-transform: uppercase
             border-bottom: 1px solid $light-border3
-            display: block
             padding-left: 3px
             margin-bottom: 5px
-            transition: color 0.4s ease
 
         & a:hover
             color: $darkpink1
@@ -449,6 +449,21 @@ body
         -ms-flex-align: end
         align-items: flex-end
         position: relative
+
+    &__adaptive-links
+        display: none
+
+    &__right-button
+        color: $dark
+        transition: color 0.4s ease
+        background-color: transparent
+        border: none
+        padding: 19px 14px
+        font-size: 25px
+        line-height: 1
+
+        &:hover
+            color: $darkpink1
 
     &__cart-wrapper
         margin-right: 12px
@@ -572,7 +587,14 @@ body
             font-weight: 700
             text-transform: uppercase
             color: $darkpink1
-            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: all 0.4s ease
+
+            &:hover
+                background-color: $darkpink1
+                color: $white
 
     &__go-to-cart
         width: 225px
@@ -780,7 +802,7 @@ body
     -webkit-box-pack: justify
     -ms-flex-pack: justify
     justify-content: space-between
-    margin: 98px auto
+    padding: 98px 0
 
     &__banner
         display: block
@@ -793,6 +815,10 @@ body
 
     &__banner:first-child
         margin-bottom: 20px
+
+    &__img
+        object-fit: cover
+        width: 100%
 
     &__text
         position: absolute
@@ -839,6 +865,7 @@ body
         font-weight: 400
         letter-spacing: 0.025em
         color: $gray-text
+        text-align: center
 
     &__cards
         display: flex
@@ -857,6 +884,7 @@ body
 
         &-link
             display: block
+            width: 100%
 
         &-img
             width: 100%
@@ -865,6 +893,7 @@ body
             & img
                 transition: opacity 0.6s ease
                 display: block
+                width: 100%
 
         &-cart-button
             position: absolute
@@ -1077,12 +1106,11 @@ body
     &__banner
         display: block
         position: relative
-        max-width: 767px
         height: 529px
 
         &-img
             display: block
-            width: 100%
+            width: 767px
             height: 100%
             object-fit: cover
 
@@ -1107,8 +1135,10 @@ body
     &__info-boxes
         padding: 48px 43px 48px 32px
         display: flex
+        width: 100%
         flex-direction: column
         justify-content: space-between
+        box-sizing: border-box
 
     &__info-box
         display: flex
@@ -1130,7 +1160,7 @@ body
             margin-bottom: 12px
 
 .subscribe
-    height: 438px
+    min-height: 438px
     background: url('../img/subscribe-bg.png')
     background-position: center bottom
     background-repeat: no-repeat
@@ -1290,11 +1320,8 @@ body
             -webkit-animation: heartbeat 1.5s ease-in-out infinite both
             animation: heartbeat 1.5s ease-in-out infinite both
 
-            &:hover
-                background-color: $darkpink3
-
 .footer-info
-    padding: 109px 89px
+    padding: 109px 0 89px
     display: flex
     justify-content: space-between
 
@@ -1310,6 +1337,13 @@ body
             font-weight: 300
             color: $gray2
             letter-spacing: 0.025em
+
+            &:not(:first-child)
+                margin-top: 20px
+
+    &__nav-wrapper
+        display: flex
+        justify-content: space-between
 
     &__nav
         width: 200px
@@ -1532,6 +1566,7 @@ body
             width: 537px
             justify-content: space-between
             margin: 58px 0 28px
+            border: none
 
         &-filter
 
