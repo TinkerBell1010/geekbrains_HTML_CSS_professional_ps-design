@@ -1281,6 +1281,7 @@ body
 
     &__form-text
         text-transform: uppercase
+        text-align: center
 
     &__form
         display: flex
@@ -1536,6 +1537,7 @@ body
             font-size: 18px
             font-weight: 900
             margin: 15px 0 59px
+            text-align: center
 
         &-description
             text-align: center
@@ -1563,36 +1565,37 @@ body
 
         &-filters
             display: flex
-            width: 537px
+            width: 100%
             justify-content: space-between
             margin: 58px 0 28px
             border: none
 
+        &-form
+            width: 100%
+
         &-filter
+            display: flex
+            flex-direction: column
 
             &-text
                 color: $dark4
                 margin-bottom: 11px
 
-            &-form
-                display: flex
-                flex-direction: column
-
-                &-field
-                    width: 144px
-                    height: 35px
-                    border: 1px solid $light2
-                    font-size: 13px
-                    line-height: 24px
-                    font-weight: 400
-                    color: $light-gray7
-                    padding: 0 15px
-                    background-color: transparent
-                    box-sizing: border-box
+            &-field
+                width: 144px
+                height: 35px
+                border: 1px solid $light2
+                font-size: 13px
+                line-height: 24px
+                font-weight: 400
+                color: $light-gray7
+                padding: 0 15px
+                background-color: transparent
+                box-sizing: border-box
 
         &-button
             border: 1px solid $darkpink2
-            width: 537px
+            width: 100%
             font-size: 16px
             line-height: 1.2
             font-weight: 700
@@ -1678,6 +1681,20 @@ body
         max-width: 846px
 
     &__top-filters
+
+        &-button
+            text-transform: uppercase
+            display: none
+            font-size: 14px
+            line-height: 14px
+            font-weight: 700
+            color: $dark
+            background-color: transparent
+            border: none
+            transition: color 0.4s ease
+
+            &:hover
+                color: $darkpink1
 
         &-content
             border: none
@@ -1770,7 +1787,7 @@ body
             -moz-appearance: none
             -webkit-appearance: none
             -ms-progress-appearance: none
-            width: 262px
+            width: 100%
             position: absolute
             top: 34px
             background-color: transparent

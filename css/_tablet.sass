@@ -142,3 +142,102 @@
 
             &-text
                 margin-top: 20px
+
+    .catalog
+        margin: 64px 16px
+
+        &__sidebar
+            width: 20%
+
+        &__content
+            width: 75%
+
+        &__top-filters
+
+            &-filter-box
+                width: 30%
+
+            &-list
+                width: 100%
+
+            &-item:not(:last-of-type)::after
+                content: "|"
+                color: #dfdfdf
+                margin: 0 10px
+
+            &-tranding-now-link
+                padding: 0
+
+        & .fetured-items__card
+            width: 30%
+
+            &-cart-button
+                top: 15%
+
+    .product
+        &__info
+            padding: 64px 130px
+            position: inherit
+            margin: 0
+
+    .fetured-items-single-page
+        margin: 64px 16px
+
+        & .fetured-items__title
+            margin-bottom: 64px
+
+    .checkout
+        margin: 32px 16px
+
+        &__form-wrapper
+            margin-left: 35px
+            justify-content: space-between
+
+        &__form
+            width: 45%
+            padding: 10px 0 32px
+
+        &__form:first-of-type
+            margin: 0
+
+        &__drop-pass-link
+            display: flex
+            align-items: center
+            padding-top: 0
+            line-height: 1.2
+            text-align: center
+
+    .shopping-cart
+        &__products
+            justify-content: space-between
+            margin-top: 64px
+
+            &-info
+                width: 40%
+
+            &-title::after
+                width: 100%
+
+            &-prices
+                width: 55%
+
+        &__product
+            &-link
+                width: 100%
+
+            &-link-wrapper::after
+                width: 250%
+
+        &__form
+            flex-wrap: wrap
+            margin: 64px 0
+
+        &__fieldset
+            width: 45%
+
+        &__fieldset-price
+            width: 100%
+            margin-top: 32px
+
+        &__pink-button
+            width: 80%
