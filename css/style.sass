@@ -1,45 +1,156 @@
-$dark = #222222
-$darkpink1 = #f16d7f
-$light-border = #ececec
-$light-shadow = #aaaaaa
-$darkpink2 = #ef5b70
-$white = #ffffff
-$light-border2 = #e6e6e6
-$light = #f9f9f9
-$gray-arrow = #838383
-$light-gray = #a4a4a4
-$dark2 = #232323
-$light-border3 = #e8e8e8
-$gray-text = #9f9f9f
-$dark-gray = #4f4f4f
-$light-gray2 = #c0c0c0
-$light2 = #eaeaea
-$dark-gray2 = #4a4a4a
-$stars = #e4af48
-$dark-gray3 = #3a3838
-$light3 = #ebebeb 
-$light-gray3 = #d6d6d6
-$light-gray4 = #c4c4c4
-$dark-gray4 = #4d4d4d
-$gray = #6f6e6e
-$dark3 = #222224
-$light4 = #fbfbfb
-$light5 = #e1e1e1
-$darkpink3 = #B84252
-$gray2 = #898989
-$gray3 = #7a7a7a
-$light-gray5 = #b2b2b2
-$light6 = #f8f3f4
-$gray4 = #636363
-$lightpink = #F892A0
-$light7 = #f7f7f7
-$gray5 = #5e5e5e
-$light-gray6 = #b9b9b9
-$dark4 = #2f2f2f
-$light-gray7 = #bcbcbc
-$light8 = #dfdfdf
-$light9 = #f0f0f0
-$light10 = #f3f3f3
+@import "vars"
+
+@mixin text($fs, $lh, $fw, $color)
+    font-size: $fs
+    line-height: $lh
+    font-weight: $fw
+    color: $color
+
+@-webkit-keyframes slide-in-top
+  0% 
+    -webkit-transform: translateY(-1000px)
+    transform: translateY(-1000px)
+    opacity: 0
+
+  100% 
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+    opacity: 1
+
+@keyframes slide-in-top
+    0%
+        -webkit-transform: translateY(-1000px)
+        transform: translateY(-1000px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+        opacity: 1
+
+@-webkit-keyframes heartbeat
+  from 
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-transform-origin: center center
+    transform-origin: center center
+    -webkit-animation-timing-function: ease-out
+    animation-timing-function: ease-out
+
+  10% 
+    -webkit-transform: scale(1.09)
+    transform: scale(1.09)
+    -webkit-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  17% 
+    -webkit-transform: scale(1.02)
+    transform: scale(1.02)
+    -webkit-animation-timing-function: ease-out
+    animation-timing-function: ease-out
+
+  33% 
+    -webkit-transform: scale(1.13)
+    transform: scale(1.13)
+    -webkit-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  45% 
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-animation-timing-function: ease-out
+    animation-timing-function: ease-out
+
+@keyframes heartbeat
+    from
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-transform-origin: center center
+        transform-origin: center center
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+    10%
+        -webkit-transform: scale(1.09)
+        transform: scale(1.09)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    17%
+        -webkit-transform: scale(1.02)
+        transform: scale(1.02)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+    33%
+        -webkit-transform: scale(1.13)
+        transform: scale(1.13)
+        -webkit-animation-timing-function: ease-in
+        animation-timing-function: ease-in
+
+    45%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-animation-timing-function: ease-out
+        animation-timing-function: ease-out
+
+@-webkit-keyframes jello-vertical
+  0% 
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+  30% 
+    -webkit-transform: scale3d(0.75, 1.25, 1)
+    transform: scale3d(0.75, 1.25, 1)
+
+  40% 
+    -webkit-transform: scale3d(1.25, 0.75, 1)
+    transform: scale3d(1.25, 0.75, 1)
+
+  50% 
+    -webkit-transform: scale3d(0.85, 1.15, 1)
+    transform: scale3d(0.85, 1.15, 1)
+
+  65% 
+    -webkit-transform: scale3d(1.05, 0.95, 1)
+    transform: scale3d(1.05, 0.95, 1)
+
+  75% 
+    -webkit-transform: scale3d(0.95, 1.05, 1)
+    transform: scale3d(0.95, 1.05, 1)
+
+  100% 
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+@keyframes jello-vertical
+    0%
+        -webkit-transform: scale3d(1, 1, 1)
+        transform: scale3d(1, 1, 1)
+
+    30%
+        -webkit-transform: scale3d(0.75, 1.25, 1)
+        transform: scale3d(0.75, 1.25, 1)
+
+    40%
+        -webkit-transform: scale3d(1.25, 0.75, 1)
+        transform: scale3d(1.25, 0.75, 1)
+
+    50%
+        -webkit-transform: scale3d(0.85, 1.15, 1)
+        transform: scale3d(0.85, 1.15, 1)
+
+    65%
+        -webkit-transform: scale3d(1.05, 0.95, 1)
+        transform: scale3d(1.05, 0.95, 1)
+
+    75%
+        -webkit-transform: scale3d(0.95, 1.05, 1)
+        transform: scale3d(0.95, 1.05, 1)
+
+    100%
+        -webkit-transform: scale3d(1, 1, 1)
+        transform: scale3d(1, 1, 1)
 
 *
     margin: 0
@@ -54,6 +165,7 @@ body
 .container
     max-width: 1140px
     margin: 0 auto
+    box-sizing: border-box
 
 .logo
     text-decoration: none
@@ -79,9 +191,36 @@ body
         font-weight: 900
         color: $darkpink1
 
+.pink-button
+    background-color: $darkpink1
+    color: $white
+    border: 1px solid transparent
+    transition: all 0.4s ease
+    cursor: pointer
+
+    &:hover
+        color: $darkpink1
+        background-color: $white
+        border-color: $darkpink1
+
+.light-button
+    background-color: transparent
+    border: 1px solid $light2
+    text-transform: uppercase
+    cursor: pointer
+    @include text(14px, 1, 700, $dark-gray2)
+    transition: all 0.4s ease
+
+    &:hover
+        background-color: $darkpink1
+        color: $white
+        border-color: transparent
+
 .drop-down
     border: 1px solid $light-border
     box-shadow: 0px 0px 8px 0px $light-shadow
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
     &::before
         content: ''
@@ -154,10 +293,15 @@ body
         background-color: $light
         position: relative
         border-radius: 3px 0 0 3px
+        transition: all 0.4s ease
 
         &-img
             margin-left: 8px
             color: $gray-arrow
+            transition: all 0.4s ease
+
+    &__search-form
+        display: flex
 
     &__search-input
         border: none
@@ -211,13 +355,14 @@ body
 
         &-container
             cursor: pointer
+            transition: background-color 0.4s ease
+            position: relative
 
     &__search-icon
         position: absolute
-        width: 36px
         text-align: center
         color: $light-gray
-        right: 0
+        right: 11px
         top: 12px
         font-size: 14px
         display: -webkit-box
@@ -226,6 +371,7 @@ body
         -webkit-box-align: center
         -ms-flex-align: center
         align-items: center
+        transition: color 0.4s ease
 
     &__search-submit-container:hover
         background-color: $darkpink1
@@ -254,8 +400,7 @@ body
     &__category
         list-style-type: none
 
-        & > a
-            text-decoration: none
+        & > h3
             font-size: 14px
             line-height: 32px
             font-weight: 400
@@ -263,7 +408,6 @@ body
             color: $dark2
             text-transform: uppercase
             border-bottom: 1px solid $light-border3
-            display: block
             padding-left: 3px
             margin-bottom: 5px
 
@@ -295,6 +439,7 @@ body
 
     &__browse:hover &__browse-img
         color: $white
+        transform: rotate(180deg)
 
     &__top-right
         display: -webkit-box
@@ -304,6 +449,21 @@ body
         -ms-flex-align: end
         align-items: flex-end
         position: relative
+
+    &__adaptive-links
+        display: none
+
+    &__right-button
+        color: $dark
+        transition: color 0.4s ease
+        background-color: transparent
+        border: none
+        padding: 19px 14px
+        font-size: 25px
+        line-height: 1
+
+        &:hover
+            color: $darkpink1
 
     &__cart-wrapper
         margin-right: 12px
@@ -316,6 +476,7 @@ body
 
         & path
             fill: $dark
+            transition: fill 0.4s ease
 
         .main-header__cart-wrapper:hover & path
             fill: $darkpink1
@@ -396,6 +557,7 @@ body
             text-transform: uppercase
             color: $light-gray2
             cursor: pointer
+            transition: color 0.4s ease
 
             &:hover
                 color: $darkpink1
@@ -425,7 +587,14 @@ body
             font-weight: 700
             text-transform: uppercase
             color: $darkpink1
-            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: all 0.4s ease
+
+            &:hover
+                background-color: $darkpink1
+                color: $white
 
     &__go-to-cart
         width: 225px
@@ -476,6 +645,7 @@ body
         height: 38px
         text-transform: capitalize
         border: 1px solid $darkpink1
+        transition: all 0.4s ease
 
         &:hover
             background: $white
@@ -483,6 +653,10 @@ body
 
         &-img
             margin-left: 8px
+            transition: transform 0.4s ease
+
+        &:hover &-img
+            transform: rotate(180deg)
 
     &__nav-list
         list-style-type: none
@@ -507,6 +681,7 @@ body
         line-height: 26px
         font-weight: 700
         color: $dark
+        transition: color 0.4s ease
 
         &_active
             border-bottom: 3px solid $darkpink2
@@ -627,14 +802,23 @@ body
     -webkit-box-pack: justify
     -ms-flex-pack: justify
     justify-content: space-between
-    margin: 98px auto
+    padding: 98px 0
 
     &__banner
         display: block
         position: relative
 
+        &:hover
+            -webkit-animation: jello-vertical 0.9s both
+            animation: jello-vertical 0.9s both
+            z-index: 3
+
     &__banner:first-child
         margin-bottom: 20px
+
+    &__img
+        object-fit: cover
+        width: 100%
 
     &__text
         position: absolute
@@ -681,6 +865,7 @@ body
         font-weight: 400
         letter-spacing: 0.025em
         color: $gray-text
+        text-align: center
 
     &__cards
         display: flex
@@ -692,18 +877,23 @@ body
     &__card
         width: 261px
         position: relative
+        transition: box-shadow 0.4s ease
 
         &:not(:nth-child(-n+4))
             margin-top: 39px
 
         &-link
             display: block
+            width: 100%
 
         &-img
             width: 100%
+            transition: background-color 0.6s ease
 
             & img
+                transition: opacity 0.6s ease
                 display: block
+                width: 100%
 
         &-cart-button
             position: absolute
@@ -728,6 +918,7 @@ body
                 justify-content: center
                 margin: 0 auto
                 pointer-events: all
+                transition: box-shadow 0.4s ease
 
                 .catalog &
                     border-radius: 3px
@@ -779,17 +970,17 @@ body
             color: $darkpink1
 
         &-stars
-            font-size: 15px
+            font-size: 0px
             line-height: 1.2
             font-weight: 400
             color: $stars
-            display: none
+            transition: font-size 0.4s ease
 
         &:hover
             box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15)
 
         &:hover &-stars
-            display: block
+            font-size: 15px
 
         &:hover &-img
             background-color: $dark-gray3
@@ -810,6 +1001,7 @@ body
         color: $white
         cursor: pointer
         padding: 18px 20px 18px 24px
+        transition: all 0.4s ease
 
         & .fa
             font-size: 15px
@@ -839,6 +1031,7 @@ body
         &-button
             padding: 15px 7px 15px 14px
             cursor: pointer
+            transition: color 0.4s ease
 
             &:last-of-type
                 padding: 15px 14px 15px 7px
@@ -850,6 +1043,7 @@ body
             color: $light-gray4
             padding: 15px 7px
             cursor: pointer
+            transition: color 0.4s ease
 
             &:nth-of-type(7)
                 padding-right: 0
@@ -867,6 +1061,7 @@ body
             padding: 15px 0
             color: $light-gray4
             cursor: pointer
+            transition: color 0.4s ease
 
             &:hover
                 color: $darkpink2
@@ -879,6 +1074,7 @@ body
         line-height: 16px
         font-weight: 700
         color: $darkpink2
+        transition: all 0.4s ease
 
         &:hover
             background-color: $darkpink2
@@ -910,8 +1106,13 @@ body
     &__banner
         display: block
         position: relative
-        width: 767px
         height: 529px
+
+        &-img
+            display: block
+            width: 767px
+            height: 100%
+            object-fit: cover
 
         &-text
             position: absolute
@@ -933,10 +1134,11 @@ body
 
     &__info-boxes
         padding: 48px 43px 48px 32px
-        width: 100%
         display: flex
+        width: 100%
         flex-direction: column
         justify-content: space-between
+        box-sizing: border-box
 
     &__info-box
         display: flex
@@ -958,7 +1160,7 @@ body
             margin-bottom: 12px
 
 .subscribe
-    height: 438px
+    min-height: 438px
     background: url('../img/subscribe-bg.png')
     background-position: center bottom
     background-repeat: no-repeat
@@ -1079,6 +1281,7 @@ body
 
     &__form-text
         text-transform: uppercase
+        text-align: center
 
     &__form
         display: flex
@@ -1114,12 +1317,12 @@ body
             font-weight: 400
             letter-spacing: 0.025em
             cursor: pointer
-
-            &:hover
-                background-color: $darkpink3
+            transition: background-color 0.4s ease
+            -webkit-animation: heartbeat 1.5s ease-in-out infinite both
+            animation: heartbeat 1.5s ease-in-out infinite both
 
 .footer-info
-    padding: 109px 89px
+    padding: 109px 0 89px
     display: flex
     justify-content: space-between
 
@@ -1135,6 +1338,13 @@ body
             font-weight: 300
             color: $gray2
             letter-spacing: 0.025em
+
+            &:not(:first-child)
+                margin-top: 20px
+
+    &__nav-wrapper
+        display: flex
+        justify-content: space-between
 
     &__nav
         width: 200px
@@ -1154,6 +1364,7 @@ body
             font-weight: 400
             color: $gray2
             display: block
+            transition: color 0.4s ease
 
             &:hover
                 color: $darkpink1
@@ -1188,6 +1399,7 @@ body
             border: 1px solid transparent
             text-align: center
             box-sizing: border-box
+            transition: all 0.4s ease
 
             &>.fa
                 vertical-align: middle
@@ -1234,6 +1446,7 @@ body
             font-weight: 300
             text-transform: uppercase
             color: $gray4
+            transition: color 0.4s ease
 
         &-item:last-of-type &-link
             font-weight: 700
@@ -1282,6 +1495,7 @@ body
                 font-size: 24px
                 line-height: 24px
                 color: $white
+                transition: color 0.4s ease
 
             &:hover .fa
                 color: $darkpink1
@@ -1323,6 +1537,7 @@ body
             font-size: 18px
             font-weight: 900
             margin: 15px 0 59px
+            text-align: center
 
         &-description
             text-align: center
@@ -1350,34 +1565,37 @@ body
 
         &-filters
             display: flex
-            width: 537px
+            width: 100%
             justify-content: space-between
             margin: 58px 0 28px
+            border: none
+
+        &-form
+            width: 100%
 
         &-filter
+            display: flex
+            flex-direction: column
 
             &-text
                 color: $dark4
                 margin-bottom: 11px
 
-            &-form
-                display: flex
-                flex-direction: column
-
-                &-field
-                    width: 144px
-                    height: 35px
-                    border: 1px solid $light2
-                    font-size: 13px
-                    line-height: 24px
-                    font-weight: 400
-                    color: $light-gray7
-                    padding: 0 15px
-                    box-sizing: border-box
+            &-field
+                width: 144px
+                height: 35px
+                border: 1px solid $light2
+                font-size: 13px
+                line-height: 24px
+                font-weight: 400
+                color: $light-gray7
+                padding: 0 15px
+                background-color: transparent
+                box-sizing: border-box
 
         &-button
             border: 1px solid $darkpink2
-            width: 537px
+            width: 100%
             font-size: 16px
             line-height: 1.2
             font-weight: 700
@@ -1388,11 +1606,13 @@ body
             justify-content: center
             padding: 16px 0
             cursor: pointer
+            transition: all 0.4s ease
 
             &-svg
                 margin-right: 15px
 
                 &-path
+                    transition: fill 0.4s ease
                     fill: $darkpink2
 
             &:hover
@@ -1452,6 +1672,7 @@ body
             line-height: 33px
             font-weight: 400
             color: $gray
+            transition: color 0.4s ease
 
             &:hover
                 color: $darkpink2
@@ -1460,6 +1681,20 @@ body
         max-width: 846px
 
     &__top-filters
+
+        &-button
+            text-transform: uppercase
+            display: none
+            font-size: 14px
+            line-height: 14px
+            font-weight: 700
+            color: $dark
+            background-color: transparent
+            border: none
+            transition: color 0.4s ease
+
+            &:hover
+                color: $darkpink1
 
         &-content
             border: none
@@ -1492,6 +1727,7 @@ body
             font-weight: 400
             color: $gray
             padding: 0 10px
+            transition: color 0.4s ease
 
             &:hover
                 color: $darkpink2
@@ -1551,7 +1787,7 @@ body
             -moz-appearance: none
             -webkit-appearance: none
             -ms-progress-appearance: none
-            width: 262px
+            width: 100%
             position: absolute
             top: 34px
             background-color: transparent
@@ -1654,3 +1890,8 @@ body
 
     & .fetured-items__card:not(:nth-child(-n+3))
         margin-top: 39px
+
+@import "checkout"
+@import "cart"
+@import "tablet"
+@import "mobile"
